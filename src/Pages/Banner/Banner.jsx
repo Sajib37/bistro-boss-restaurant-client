@@ -11,8 +11,8 @@ import image6 from '../../assets/home/06.png'
 
 const Banner = () => {
     return (
-        <div className=''>
-            <Carousel className='text-center'>
+        <div className='' >
+            <Carousel className='text-center' autoPlay={true} transitionTime={500} infiniteLoop={true}>
                 <div className="lg:h-[80vh] md:h-[60vh] h-[45vh]">
                     <img className="h-full" src={image1} />
                 </div>
