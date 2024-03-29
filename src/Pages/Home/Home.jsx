@@ -1,5 +1,4 @@
 import React from 'react';
-import Banner from '../Banner/Banner';
 import Category from './Category/Category';
 import Heropart from '../../Shared/Heropart/Heropart';
 import chef from "../../assets/home/chef-service.jpg"
@@ -9,6 +8,7 @@ import CallUs from './CallUs/CallUs';
 import ChefRecommended from './ChefRecommended/ChefRecommended';
 import Featured from './Featured/Featured';
 import Testimonials from './Testimonials/Testimonials';
+import Banner from './Banner/Banner';
 
 const Home = () => {
     return (
@@ -16,7 +16,6 @@ const Home = () => {
             <Helmet>
                 <title>Bistro-boss || Home</title>
             </Helmet>
-
             <Banner></Banner>
             <div className="mt-12 md:mt-16">
                 <Category></Category>
