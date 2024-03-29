@@ -52,7 +52,7 @@ const Topnav = () => {
                     <a className="btn btn-ghost text-xl"><img className='w-12 hidden lg:block' src={logo} alt="logo" /></a>
                 </div>
                 <div className="navbar-center  hidden lg:flex">
-                    <ul className="menu menu-horizontal  px-1">
+                    <ul className="menu py-2 menu-horizontal text-xl  px-1">
                         {navList}
                     </ul>
                 </div>
