@@ -8,6 +8,7 @@ import PopularMenu from './PopularMenu/PopularMenu';
 import CallUs from './CallUs/CallUs';
 import ChefRecommended from './ChefRecommended/ChefRecommended';
 import Featured from './Featured/Featured';
+import Testimonials from './Testimonials/Testimonials';
 
 const Home = () => {
     return (
@@ -34,6 +35,7 @@ const Home = () => {
             <CallUs></CallUs>
             <ChefRecommended></ChefRecommended>
             <Featured></Featured>
+            <Testimonials></Testimonials>
         </section>
     );
 };

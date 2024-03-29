@@ -6,7 +6,7 @@ import ItemCard from "../../../Shared/ItemCard/ItemCard";
 const PopularMenu = () => {
     const [offeredItem, loading] = useMenu("offered");
     if (loading) {
-        return <p>Loading.......</p>;
+        return <p className="text-center">chef recommended Loading.......</p>;
     }
     return (
         <section className="mt-8 md:mt-16">
