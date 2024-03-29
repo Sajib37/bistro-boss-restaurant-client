@@ -1,12 +1,17 @@
 import React from 'react';
+import { Parallax } from 'react-parallax';
 
 const Heropart = ({image,subHeading,heading}) => {
     return (
-        <div
-            style={{ backgroundImage: `url(${image})`, backgroundSize: "cover" ,backgroundPosition:'center' ,backgroundRepeat:'no-repeat' }}
-            className=" h-[50vh] md:h-[60vh] lg:h-[70vh] relative bg-fixed"
-        >
-            <div className="w-4/5 absolute top-[25%] left-[10%] h-1/2 bg-black opacity-60 "> </div>
+
+        <Parallax
+        blur={{ min: -45, max: 45 }}
+        bgImage={image}
+        bgImageAlt="the dog"
+        
+    >
+        <div className=" h-[50vh] md:h-[60vh] lg:h-[70vh] relative ">
+            <div className="w-4/5 absolute top-[25%] left-[10%] h-1/2 bg-black opacity-50 "> </div>
 
             <div className="w-4/5 absolute top-[25%] z-30 left-[10%] h-1/2">
                 <div className="absolute z-20 w-full h-full top-0 left-0 text-white flex flex-col justify-center items-center space-y-2">
@@ -17,6 +22,8 @@ const Heropart = ({image,subHeading,heading}) => {
                 </div>
             </div>
         </div>
+    </Parallax>
+        
     );
 };
 
