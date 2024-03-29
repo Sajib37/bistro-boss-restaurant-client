@@ -9,7 +9,7 @@ const ItemCard = ({ item }) => {
     return (
         <div className='px-1'>
             <Card
-            className="max-w-sm md:max-w-xs lg:max-w-sm bg-[#F3F3F3] mx-auto"
+            className="max-w-sm md:max-w-sm  lg:max-w-md bg-[#F3F3F3] mx-auto"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc={image}
             >

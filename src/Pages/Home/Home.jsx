@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet-async';
 import PopularMenu from './PopularMenu/PopularMenu';
 import CallUs from './CallUs/CallUs';
 import ChefRecommended from './ChefRecommended/ChefRecommended';
+import Featured from './Featured/Featured';
 
 const Home = () => {
     return (
@@ -32,6 +33,7 @@ const Home = () => {
             <PopularMenu></PopularMenu>
             <CallUs></CallUs>
             <ChefRecommended></ChefRecommended>
+            <Featured></Featured>
         </section>
     );
 };
