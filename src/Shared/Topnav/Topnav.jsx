@@ -7,38 +7,40 @@ const Topnav = () => {
 
     const navList = <>
         <li>
-            <NavLink to="/" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "underline underline-offset-4 text-red-600 font-bold" : ""}>
+            <NavLink to="/" className={({ isActive, isPending }) =>isPending ? "text-red-600" : isActive ? "underline underline-offset-4 text-red-800 font-bold" : "text-white"}>
                 Home
-            </NavLink>
-        </li>
-
-        <li>
-            <NavLink to="/contact" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "underline underline-offset-4 text-red-600 font-bold" : ""}>
-                Contact Us
-            </NavLink>
-        </li>
-
-        <li>
-            <NavLink to="/dashboard" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "underline underline-offset-4 text-red-600 font-bold" : ""}>
-                Dashboard
             </NavLink>
         </li>
         
         <li>
-            <NavLink to="/menu" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "underline underline-offset-4 text-red-600 font-bold" : ""}>
+            <NavLink to="/menu" className={({ isActive, isPending }) =>isPending ? "text-red-800" : isActive ? "underline underline-offset-4 text-red-800 font-bold" : "text-white"}>
                 Our Menu
             </NavLink>
         </li>
 
         <li>
-            <NavLink to="/shop" className={({ isActive, isPending }) =>isPending ? "pending" : isActive ? "underline underline-offset-4 text-red-600 font-bold" : ""}>
+            <NavLink to="/contact" className={({ isActive, isPending }) =>isPending ? "text-red-800" : isActive ? "underline underline-offset-4 text-red-800 font-bold" : "text-white"}>
+                Contact Us
+            </NavLink>
+        </li>
+
+        <li>
+            <NavLink to="/dashboard" className={({ isActive, isPending }) =>isPending ? "text-red-800" : isActive ? "underline underline-offset-4 text-red-800 font-bold" : "text-white"}>
+                Dashboard
+            </NavLink>
+        </li>
+        
+        
+
+        <li>
+            <NavLink to="/shop" className={({ isActive, isPending }) =>isPending ? "text-red-800" : isActive ? "underline underline-offset-4 text-red-800 font-bold" : "text-white"}>
                 Order Now
             </NavLink>
         </li>       
     </>
 
     return (
-        <div className='fixed top-0 z-40 w-full bg-black bg-opacity-70'>
+        <div className='fixed top-0 z-40 w-full bg-black bg-opacity-80'>
             <div className="navbar text-white">
                 <div className="navbar-start">
                     <div className="dropdown">

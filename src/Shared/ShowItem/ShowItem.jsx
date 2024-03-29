@@ -1,13 +1,16 @@
 import React from 'react';
 import Item from '../Item/Item';
 import { Link } from 'react-router-dom';
+import useMenu from '../../hooks/useMenu';
 
-const ShowItem = ({items,btnText}) => {
+const ShowItem = ({ category, btnText }) => {
+    const [menu, loading] = useMenu(category)
+    console.log(menu)
     return (
         <section>
             <section className="max-w-screen-2xl mx-auto grid lg:grid-cols-2 grid-cols-1 px-2 gap-4 md:gap-6">
                 {
-                    items.slice(0,6).map((item,idx)=><Item key={idx} item={item}></Item>)
+                    menu && menu.slice(0,6).map((item,idx)=><Item key={idx} item={item}></Item>)
                 }  
             </section>
             <Link to='/shop'>

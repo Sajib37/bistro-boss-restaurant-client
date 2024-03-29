@@ -5,11 +5,11 @@ import ShowItem from '../../../Shared/ShowItem/ShowItem';
 
 const PopularMenu = () => {
 
-    const [popularItem, loading] = useMenu('popular')
+    
     return (
         <section className='mt-8 md:mt-16'>
             <SectionTitle subHeading='Check it Out' heading='FROM OUR MENU'></SectionTitle>
-            <ShowItem items={popularItem} btnText={'view Full Menu'}></ShowItem>
+            <ShowItem category={'popular'} btnText={'view Full Menu'}></ShowItem>           
         </section>
     );
 };

@@ -4,18 +4,20 @@ import { useQuery } from "@tanstack/react-query";
 
 const useMenu = (category) => {
     const axiosPublic = useAxiosPublic();
-    const [loading, setLoading] = useState(true);
 
-    const { refetch, data: menu=[]} = useQuery({
-        queryKey: ['menus'],
+    const {
+        refetch,
+        loading,
+        data: menu,
+    } = useQuery({
+        queryKey: ["menu", { category }],
         queryFn: async () => {
-            const result = await axiosPublic.get(`/get/${category}`)
-            setLoading(false)
+            const result = await axiosPublic.get(`/get/${category}`);
             return result.data;
-        }
-    })
+        },
+    });
 
-    return [menu,loading, refetch]
+    return [menu, loading, refetch];
 };
 
 export default useMenu;
