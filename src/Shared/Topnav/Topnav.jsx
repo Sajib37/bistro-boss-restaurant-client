@@ -25,8 +25,8 @@ const Topnav = () => {
         </li>
 
         <li>
-            <NavLink to="/dashboard" className={({ isActive, isPending }) =>isPending ? "text-red-800" : isActive ? "underline underline-offset-4 text-red-800 font-bold" : "text-white"}>
-                Dashboard
+            <NavLink to="/contact" className={({ isActive, isPending }) =>isPending ? "text-red-800" : isActive ? "underline underline-offset-4 text-red-800 font-bold" : "text-white"}>
+                Conatact Us
             </NavLink>
         </li>
         

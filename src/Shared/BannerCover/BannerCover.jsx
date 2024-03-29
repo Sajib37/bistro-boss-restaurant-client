@@ -4,7 +4,7 @@ const BannerCover = ({image,subHeading,heading}) => {
     return (
         <div
             style={{ backgroundImage: `url(${image})`, backgroundSize: "cover" ,backgroundPosition:'center' ,backgroundRepeat:'no-repeat' }}
-            className=" h-[60vh] md:h-[70vh] lg:h-[80vh] relative bg-fixed"
+            className=" h-[50vh] md:h-[70vh] lg:h-[80vh] relative bg-fixed"
         >
             <div className="w-4/5 md:w-3/5  absolute top-[35%] left-[10%] md:left-[20%] h-2/5 bg-black opacity-70 "> </div>
 
