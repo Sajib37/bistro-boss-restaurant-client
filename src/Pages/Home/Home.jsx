@@ -5,6 +5,7 @@ import Heropart from '../../Shared/Heropart/Heropart';
 import chef from "../../assets/home/chef-service.jpg"
 import { Helmet } from 'react-helmet-async';
 import PopularMenu from './PopularMenu/PopularMenu';
+import CallUs from './CallUs/CallUs';
 
 const Home = () => {
     return (
@@ -17,7 +18,7 @@ const Home = () => {
             <div className="mt-8 md:mt-12">
                 <Category></Category>
             </div>
-            <div className="max-w-screen-xl mx-auto mt-10 md:mt-16">
+            <div className="max-w-screen-2xl mx-auto mt-10 md:mt-16">
                 <Heropart
                     image={chef}
                     heading={"Bistro Boss"}
@@ -28,6 +29,7 @@ const Home = () => {
             </div>
 
             <PopularMenu></PopularMenu>
+            <CallUs></CallUs>
         </section>
     );
 };

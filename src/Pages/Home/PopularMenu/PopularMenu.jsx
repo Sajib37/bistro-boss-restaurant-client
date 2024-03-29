@@ -6,9 +6,6 @@ import ShowItem from '../../../Shared/ShowItem/ShowItem';
 const PopularMenu = () => {
 
     const [popularItem, loading] = useMenu('popular')
-    if (!loading) {
-        console.log(popularItem)
-    }
     return (
         <section className='mt-8 md:mt-16'>
             <SectionTitle subHeading='Check it Out' heading='FROM OUR MENU'></SectionTitle>

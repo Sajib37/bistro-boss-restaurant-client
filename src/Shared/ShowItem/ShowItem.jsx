@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ShowItem = ({items,btnText}) => {
     return (
         <section>
-            <section className="max-w-screen-xl mx-auto grid lg:grid-cols-2 grid-cols-1 px-2 gap-4 md:gap-6">
+            <section className="max-w-screen-2xl mx-auto grid lg:grid-cols-2 grid-cols-1 px-2 gap-4 md:gap-6">
                 {
                     items.slice(0,6).map((item,idx)=><Item key={idx} item={item}></Item>)
                 }  
