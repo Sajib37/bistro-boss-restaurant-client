@@ -6,6 +6,7 @@ import chef from "../../assets/home/chef-service.jpg"
 import { Helmet } from 'react-helmet-async';
 import PopularMenu from './PopularMenu/PopularMenu';
 import CallUs from './CallUs/CallUs';
+import ChefRecommended from './ChefRecommended/ChefRecommended';
 
 const Home = () => {
     return (
@@ -15,10 +16,10 @@ const Home = () => {
             </Helmet>
 
             <Banner></Banner>
-            <div className="mt-8 md:mt-12">
+            <div className="mt-12 md:mt-16">
                 <Category></Category>
             </div>
-            <div className="max-w-screen-2xl mx-auto mt-10 md:mt-16">
+            <div className="max-w-screen-2xl mx-auto mt-16 md:mt-24">
                 <Heropart
                     image={chef}
                     heading={"Bistro Boss"}
@@ -30,6 +31,7 @@ const Home = () => {
 
             <PopularMenu></PopularMenu>
             <CallUs></CallUs>
+            <ChefRecommended></ChefRecommended>
         </section>
     );
 };
