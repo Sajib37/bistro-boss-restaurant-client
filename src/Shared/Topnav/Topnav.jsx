@@ -120,14 +120,14 @@ const Topnav = () => {
                     </div>
                     <a className="btn btn-ghost text-xl">
                         <img
-                            className="w-12 hidden lg:block"
+                            className="w-10 hidden lg:block"
                             src={logo}
                             alt="logo"
                         />
                     </a>
                 </div>
                 <div className="navbar-center  hidden lg:flex">
-                    <ul className="menu py-2 menu-horizontal text-xl  px-1">
+                    <ul className="menu  menu-horizontal text-lg  px-1">
                         {navList}
                     </ul>
                 </div>
@@ -135,7 +135,7 @@ const Topnav = () => {
                     {user ? (
                         <div className="dropdown dropdown-end">
                             <div tabIndex={0} role="button" className="mb-1">
-                                <img className="w-10 h-10 md:w-12 md:h-12 rounded-full" src={user?.photoURL} alt="" />
+                                <img className="w-8 h-8 md:w-10 md:h-10 rounded-full" src={user?.photoURL} alt="" />
                             </div>
                             <ul
                                 tabIndex={0}

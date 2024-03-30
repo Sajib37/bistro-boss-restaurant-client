@@ -20,7 +20,7 @@ const Category = () => {
                 subHeading="From 11:00am to 10:00pm"
                 heading="ORDER ONLINE"
             ></SectionTitle>
-            <div className="max-w-screen-2xl mx-auto">
+            <div className="max-w-screen-xl mx-auto">
                 <Swiper
                     slidesPerView={4}
                     spaceBetween={8}

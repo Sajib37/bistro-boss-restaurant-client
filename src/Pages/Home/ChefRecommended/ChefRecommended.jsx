@@ -14,7 +14,7 @@ const PopularMenu = () => {
                 subHeading="Should Try"
                 heading="CHEF RECOMMENDS"
             ></SectionTitle>
-            <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3">
+            <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3">
                 {offeredItem &&
                     offeredItem
                         .slice(0, 3)
