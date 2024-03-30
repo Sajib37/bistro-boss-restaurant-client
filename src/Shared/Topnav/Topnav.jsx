@@ -1,9 +1,26 @@
 import React from "react";
 import logo from "/logo.png";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "../../AuthProvider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 const Topnav = () => {
     const navigate = useNavigate();
 
+    const { user,logOut } = useAuth();
+    console.log(user?.photoURL);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+                toast.success('Log Out Successfull')
+                navigate('/')
+                
+            })
+            .catch(error => {
+            toast.error('Log Out Failed !!')
+        })
+    }
+    
     const navList = (
         <>
             <li>
@@ -69,7 +86,8 @@ const Topnav = () => {
     );
 
     return (
-        <div className="fixed top-0 z-40 w-full lg:py-1 lg:px-6 bg-black bg-opacity-80">
+        <div className="fixed top-0 z-40 w-full  lg:px-6 bg-black bg-opacity-80">
+            <Toaster></Toaster>
             <div className="navbar text-white">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -113,13 +131,32 @@ const Topnav = () => {
                         {navList}
                     </ul>
                 </div>
-                <div
-                    onClick={() => navigate("/signIn")}
-                    className="navbar-end "
-                >
-                    <a className="px-4 py-2 bg-white text-black font-bold rounded-xl">
-                        Login
-                    </a>
+                <div className="navbar-end ">
+                    {user ? (
+                        <div className="dropdown dropdown-end">
+                            <div tabIndex={0} role="button" className="mb-1">
+                                <img className="w-10 h-10 md:w-12 md:h-12 rounded-full" src={user?.photoURL} alt="" />
+                            </div>
+                            <ul
+                                tabIndex={0}
+                                className="dropdown-content min-w-48 bg-black z-[1] menu p-2 shadow rounded-box"
+                            >
+                                <li>
+                                    <a className="text-white font-bold ">{ user?.displayName}</a>
+                                </li>
+                                <li onClick={handleLogOut}>
+                                    <button className="text-white font-bold  p-2 bg-red-700 ">Log Out</button>
+                                </li>
+                            </ul>
+                        </div>
+                    ) : (
+                        <a
+                            onClick={() => navigate("/signIn")}
+                            className="px-4 py-2 cursor-pointer bg-white text-black font-bold rounded-xl"
+                        >
+                            Login
+                        </a>
+                    )}
                 </div>
             </div>
         </div>

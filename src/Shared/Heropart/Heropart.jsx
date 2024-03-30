@@ -5,7 +5,7 @@ const Heropart = ({image,subHeading,heading}) => {
     return (
 
         <Parallax
-        blur={{ min: -45, max: 45 }}
+        blur={{ min: -50, max: 50 }}
         bgImage={image}
         bgImageAlt="the dog"
         

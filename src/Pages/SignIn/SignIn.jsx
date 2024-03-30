@@ -45,8 +45,11 @@ const SignIn = () => {
     const handleFormSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
-        const email = form.email.value;
+        const email = emailRef.current.value;
         const password = form.password.value;
+
+        console.log(email)
+        console.log(password)
         
         emailLogin(email, password)
             .then(async result => {
@@ -56,7 +59,7 @@ const SignIn = () => {
                 navigate(location?.state ? location.state : '/');
             })
             .catch(error =>{
-            toast.error('Login Failed !!')
+            toast.error('my name is khan')
         })
     }
 
