@@ -68,7 +68,7 @@ const SignIn = () => {
             toast.success('Check your email for new password')
             })
             .catch(error => {
-                toast.error('pasweord reset Failed !')
+                toast.error('pasword reset Failed !')
         })
     }
 
@@ -92,26 +92,29 @@ const SignIn = () => {
                             <div className="mb-1 block">
                                 <Label htmlFor="input-gray" color="gray" value="Email:" />
                             </div>
-                            <TextInput  name='email' id="input-gray" ref={emailRef} placeholder="Enter your Email" type='email' required color="gray"/>
+                            {/* <TextInput  name='email' id="input-gray" ref={emailRef} placeholder="Enter your Email" type='email' required color="gray"/> */}
+                            <input name='email' className="w-full p-3 rounded-lg" ref={emailRef} placeholder="Enter your Email" type='email' required />
                         </div>
                         <div className="mb-3">
                             <div className="mb-1 block">
                                 <Label htmlFor="input-gray" color="gray" value="password:" />
                             </div>
-                            <TextInput name='password' id="input-gray" type='password' placeholder="Enter your password" required color="gray"/>
+                            {/* <TextInput name='password' id="input-gray" type='password' placeholder="Enter your password" required color="gray"/> */}
+                            <input name='password' className="w-full p-3 rounded-lg"  placeholder="Enter your password" type='password' required />
                         </div>
                         {/* captcha */}
                             <LoadCanvasTemplate/>
                         <div className="mb-1">
-                            <TextInput name='capctha' ref={captchaRef} id="input-gray" type='text' placeholder="Enter the text above" required color="gray"/>
+                            {/* <TextInput name='capctha'  id="input-gray"  required color="gray"/> */}
+                            <input name='email' className="w-full p-3 rounded-lg" ref={captchaRef} type='text' placeholder="Enter the text above" required />
                         </div>
                         <button onClick={handleValidate} className={`px-2 py-1 mb-2  text-white ${disabled? 'bg-[#D1A054]' : 'bg-green-600'}  rounded-lg`}>validate </button>
 
-                        <p onClick={handleResetPassword} className="mb-2 text-sm font-semibold hover:cursor-pointer text-[#D1A054]">Forgot password ?</p>
+                        <p onClick={handleResetPassword} className="mb-2 text-base font-semibold hover:cursor-pointer text-[#D1A054]">Forgot password ?</p>
                         <button name='submit' disabled={disabled} className={`w-full   py-2 rounded-lg ${disabled ? ' text-gray-400 bg-gray-200' :'text-white bg-[#D1A054]'}`}>Login</button>
                     </form>  
                     
-                    <p className="font-ubuntu font-medium mt-4">Don't have an account? Please, <Link className="text-[#D1A054]" to='/signUp'>Register</Link></p>
+                    <p className="font-ubuntu font-medium mt-4">Don't have an account? Please, <Link className="text-[#D1A054]" to='/SignUp'>Register</Link></p>
                     
                     <p className="text-center mt-2 font-semibold">Or sign up with</p>
                     <SocilLogin></SocilLogin>
