@@ -11,6 +11,7 @@ import {
 } from "@tanstack/react-query";
 import { HelmetProvider } from 'react-helmet-async'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import AuthProvider from './AuthProvider/AuthProvider'
 
 // Create a client
 const queryClient = new QueryClient();
@@ -18,10 +19,12 @@ const queryClient = new QueryClient();
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <HelmetProvider>
-        <RouterProvider router={router} />
-        <ReactQueryDevtools initialIsOpen={false} />
-      </HelmetProvider>
+        <HelmetProvider>
+          <AuthProvider>
+            <RouterProvider router={router} />
+          </AuthProvider>
+        </HelmetProvider>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   </React.StrictMode>,
 )

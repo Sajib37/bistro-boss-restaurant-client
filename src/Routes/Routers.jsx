@@ -7,6 +7,8 @@ import ErrorPage from "../Pages/Errorpage/Errorpage";
 import OurMenu from "../Pages/OurMenu/OurMenu";
 import OurShop from "../Pages/OurShop/OurShop";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import SignIn from "../Pages/SignIn/SignIn";
+import SignUp from "../Pages/SignUp/SignUp";
   
 
 export const router = createBrowserRouter([
@@ -30,6 +32,14 @@ export const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <ContactUs></ContactUs>
+            },
+            {
+                path: "/signIn",
+                element: <SignIn></SignIn>
+            },
+            {
+                path: "/SignUp",
+                element: <SignUp></SignUp>
             }
         ]
     }

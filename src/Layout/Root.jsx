@@ -14,7 +14,7 @@ const Root = () => {
 
     const location = useLocation()
     
-    const noHeaderfooter = location.pathname.includes('signIn') || location.pathname.includes('signUp') ;
+    const noHeaderfooter = location.pathname.includes('signIn') || location.pathname.includes('SignUp') ;
     return (
         <div>
   

@@ -16,10 +16,10 @@ const OurShop = () => {
             <BannerCover image={shopBg} heading={'Our Shop'} subHeading={'Would you like to try a dish?'}></BannerCover>
             
              {/* Tabs */}
-             <section className="my-8 md:my-12 lg:my-16 max-w-screen-xl mx-auto">
+             <section className="my-8 md:my-12 lg:my-16 max-w-screen-2xl mx-auto">
                 
                 <Tabs defaultIndex={1} onSelect={(index) => console.log(index)}>
-                    <TabList>
+                    <TabList className='text-center mb-2 md:mb-4'>
                     <Tab ><p className="uppercase font-semibold text-sm md:text-xl">Salad</p></Tab>
                     <Tab ><p className="uppercase font-semibold text-sm md:text-xl">pizza</p></Tab>
                     <Tab ><p className="uppercase font-semibold text-sm md:text-xl">soup</p></Tab>
